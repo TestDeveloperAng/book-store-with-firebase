@@ -1,0 +1,57 @@
+<div class="container">
+  <!-- Header -->
+  <header class="header">
+    <ul class="header--action">
+      <li class="view--courses__btn" (click)="viewCourses()">
+        <span class="cart--icon">
+          <img src="../assets/images/certificate.png" alt="" />
+        </span>
+        <span class="cart--text">
+          Courses
+        </span>
+      </li>
+
+      <li class="view--cart__btn" (click)="viewCart()">
+        <span class="cart--icon">
+          <img src="../assets/images/cart.png" alt="" />
+        </span>
+        <span class="cart--text">
+          Cart
+        </span>
+      </li>
+    </ul>
+  </header>
+
+  <!-- Course Row -->
+  <div class="row" *ngIf="viewCourseStatus">
+    <div class="col-xs-12  m-auto">
+      <h3 class="text-dark text-center">Our Best Courses</h3>
+      <app-courses
+        *ngFor="let course of courses"
+        [course]="course"
+        (courseBuyClicked)="coursePurchased($event)"
+      >
+      </app-courses>
+    </div>
+  </div>
+
+  <!-- Cart Row -->
+  <div class="row" *ngIf="viewCartStatus">
+    <div class="col-xs-12 m-auto">
+      <h5>Courses purchased are :-</h5>
+
+      <div
+        class="card"
+        style="width: 18rem;"
+        *ngFor="let course of coursesPurchased"
+      >
+        <div class="card-body text-center">
+          <h5 class="card-title text-success">{{ course.course_title }}</h5>
+          <p class="card-text">
+            {{ course.course_price }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

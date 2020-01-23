@@ -1,0 +1,31 @@
+<div class="container">
+  <!-- Header -->
+  <header class="header">
+    <ul class="header--action">
+      <li
+        class="view--courses__btn"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <span class="cart--icon">
+          <img src="../assets/images/certificate.png" alt="" />
+        </span>
+        <span class="cart--text">
+          Courses
+        </span>
+      </li>
+
+      <li class="view--cart__btn" routerLink="/cart" routerLinkActive="active">
+        <span class="cart--icon">
+          <img src="../assets/images/cart.png" alt="" />
+        </span>
+        <span class="cart--text">
+          Cart
+        </span>
+      </li>
+    </ul>
+  </header>
+
+  <router-outlet></router-outlet>
+</div>

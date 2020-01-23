@@ -1,0 +1,38 @@
+.card {
+  margin: 1rem;
+}
+.enrolled {
+  background-color: gray;
+}
+
+.card {
+  width: 18rem;
+  margin: 2rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: justify;
+}
+
+.bestSeller {
+  width: 100px;
+  text-transform: uppercase;
+  padding: 0.2rem 0.1rem 0.2rem 0.4rem;
+  background-color: #f4c150;
+  clip-path: polygon(0% 0%, 75% 0%, 80% 50%, 75% 100%, 0% 100%);
+  border-radius: 5px;
+
+  font-size: 10px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.card--trainer {
+  padding: 0.3rem 1rem;
+  text-align: left;
+  font-size: 12px;
+  color: #686f7a;
+}

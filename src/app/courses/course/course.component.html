@@ -1,0 +1,64 @@
+<div class="card">
+  <img
+    class="card-img-top"
+    src="{{ course.course_image }}"
+    alt="Card image cap"
+  />
+  <div class="card-body text-center">
+    <h5 class="card-title text-dark">{{ course.course_title }}</h5>
+    <div class="bestSeller">bestseller</div>
+    <div class="card--trainer">{{ course.course_trainer }}</div>
+    <p class="card-text">₹ {{ course.course_price }}</p>
+    <a
+      href="#"
+      class="btn btn-sm btn-primary btn--buy"
+      [id]="course.id"
+      (click)="buycourse($event)"
+      >Buy Course</a
+    >
+  </div>
+</div>
+
+<!-- <form action="">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        [(ngModel)]="studentName"
+        (input)="detectName($event)"
+      />
+    </div>
+  
+    <button class="btn btn-success" (click)="enrollCourse(studentNameRef)">
+      Enroll
+    </button>
+    <br />
+    <br />
+  
+    <button class="btn btn-success" (click)="unEnrollCourse($event)">
+      UnEnroll
+    </button>
+    <br />
+    <br />
+    <p
+      *ngIf="enrollStatus; else noCourseSelected"
+      [ngStyle]="{
+        color: enrollStatus === true ? 'lightgreen' : 'red'
+      }"
+      [ngClass]="{ enrolled: this.enrollStatus === true }"
+    >
+      {{ studentName + " is enrolled in Course :- " + code }}
+    </p>
+  
+    <ng-template #noCourseSelected>
+      <p
+        [ngStyle]="{
+          color: enrollStatus === false ? 'red' : 'lightgreen'
+        }"
+      >
+        No course selected
+      </p>
+    </ng-template>
+  </form> -->

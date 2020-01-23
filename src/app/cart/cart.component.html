@@ -1,0 +1,19 @@
+<!-- Cart Row -->
+<div class="row" *ngIf="viewCartStatus">
+  <div class="col-sm-12 m-auto">
+    <h5>Courses purchased are :-</h5>
+
+    <div
+      class="card"
+      style="width: 18rem;"
+      *ngFor="let course of coursesPurchased"
+    >
+      <div class="card-body text-center">
+        <h5 class="card-title text-success">{{ course.course_title }}</h5>
+        <p class="card-text">
+          {{ course.course_price }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
